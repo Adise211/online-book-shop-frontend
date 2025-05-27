@@ -1,16 +1,11 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/index.tsx";
 import "./App.css";
 
 function App() {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<h1>Welcome to the Home Page</h1>} />
-          <Route path="/about" element={<h1>About Us</h1>} />
-          <Route path="/contact" element={<h1>Contact Us</h1>} />
-        </Routes>
-      </BrowserRouter>
+      <RouterProvider router={router} />
     </>
   );
 }
