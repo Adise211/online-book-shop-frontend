@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import { Layout } from "antd";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 
 const { Content } = Layout;
 const DefaultLayout = () => {
@@ -20,7 +21,7 @@ const DefaultLayout = () => {
       <Content style={contentStyle}>
         <Outlet /> {/* This renders the child route */}
       </Content>
-      {/* <Footer /> */}
+      <Footer />
     </Layout>
   );
 };
