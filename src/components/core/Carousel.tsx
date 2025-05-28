@@ -1,6 +1,17 @@
 import { Carousel as AntCarousel } from "antd";
 
-const Carousel: React.FC = () => {
+interface Props {
+  autoplay?: boolean;
+  dots?: boolean;
+  arrows?: boolean;
+}
+
+const Carousel: React.FC<Props> = ({
+  autoplay = false,
+  dots = false,
+  arrows = false,
+}) => {
+  // Define styles for the content of the carousel
   const contentStyle: React.CSSProperties = {
     height: "50vh",
     color: "#fff",
@@ -10,7 +21,7 @@ const Carousel: React.FC = () => {
   };
 
   return (
-    <AntCarousel autoplay>
+    <AntCarousel autoplay={autoplay} dots={dots} arrows={arrows}>
       <div>
         <h3 style={contentStyle}>1</h3>
       </div>
