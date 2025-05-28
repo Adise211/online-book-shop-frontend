@@ -1,4 +1,5 @@
 import Carousel from "../components/core/Carousel";
+import FullList from "../components/FullList";
 import MinialList from "../components/MinimalList";
 
 const HomePage = () => {
@@ -7,6 +8,8 @@ const HomePage = () => {
       <Carousel autoplay={true} />
       <div className="my-8"></div>
       <MinialList />
+      <div className="my-12"></div>
+      <FullList />
     </div>
   );
 };
