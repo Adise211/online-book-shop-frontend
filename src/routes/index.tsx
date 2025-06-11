@@ -4,6 +4,7 @@ import BlankLayout from "../layouts/BlankLayout";
 import ErrorPage from "../pages/ErrorPage";
 import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
+import BookPage from "../pages/BookPage";
 
 export const router = createBrowserRouter([
   {
@@ -12,7 +13,7 @@ export const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage /> } /* '/' */,
-      //  { path: 'about', element: <AboutPage /> } /* '/about' */
+      { path: "books/:gVolumeId", element: <BookPage /> } /* '/about' */,
     ],
   },
   {
